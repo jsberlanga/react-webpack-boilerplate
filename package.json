@@ -16,7 +16,8 @@
     "format": "prettier --write src/**/*.js",
     "lint": "eslint './src/**/*.js'",
     "validate": "npm-run-all --parallel format lint",
-    "test": "jest --env=jsdom --watchAll",
+    "test": "jest",
+    "test:all": "jest --env=jsdom --watchAll",
     "test:coverage": "jest --coverage"
   },
   "keywords": [],
@@ -61,7 +62,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "CI=true npm run test"
+      "pre-push": "npm run test"
     }
   },
   "lint-staged": {
