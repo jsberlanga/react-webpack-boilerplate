@@ -1,0 +1,6 @@
+language: node_js
+notifications:
+  email:
+    - hi@jusoto.dev
+  on_success: always
+  on_failure: always
